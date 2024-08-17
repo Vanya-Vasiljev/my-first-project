@@ -23,24 +23,30 @@
 body{
     margin: 0;
 }
+
 .container{
     width: 320px;
     margin: 0 auto;
 }
+
 .header{
     display: flex;
     height: 51px;
-    margin: 19px;
-    margin-bottom: 19px; 
-    margin-right: 16px;
-    margin-left: 16px;
     justify-content: flex-start;
     align-items: center;
     background-color: rgba(255, 255, 255, 1);
 }
-.header__link:nth-child(1), .header__link:nth-child(5), .header__link:nth-child(6), .header__link:nth-child(7), .header__link:nth-child(7), .header__link:nth-child(3){
+
+.header__container{
+    margin: 19px; 
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+ .header__link:nth-child(3), .header__link:nth-child(5), .header__link:nth-child(6), .header__link:nth-child(7){
     display: none;
 }
+
 .header__link{
     margin-right: 16px;
 }
@@ -48,12 +54,15 @@ body{
 .header__link:last-child{
     margin-right: 0;
 }
+
 .captionForDesktop{
     display: none;
 }
-.textForDesktop{
+
+.header__textForDesktop{
     display: none;
 }
+
 .content{
     background-color: rgba(248, 248, 248, 1);
     padding-bottom: 35px;
@@ -66,13 +75,18 @@ body{
     font-family: 'TT-Lakes-bold', 'Arial', sans-serif;
     color: rgba(27, 28, 33, 1);
     align-items: center;
-    margin-bottom: 24px;
+   
     
+}
+
+.caption__container{
+    margin-bottom: 24px;
 }
 
 .caption__item{
     margin-right: 12px;
 }
+
 .caption__item:last-child{
     margin: 0;
 }
@@ -81,17 +95,24 @@ body{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 24px;
-    overflow: scroll;
-    margin-left: 16px;
-    
+    overflow: scroll;   
 }
-.menu__item{
+
+.menu__container{
+    margin-bottom: 24px;
+    margin-left: 16px;
+}
+
+.menu__link{
+    text-decoration: none;
+    font-family: 'TT-Lakes-medium', 'Arial', sans-serif;
+    color: rgba(126, 126, 130, 1);
+    font-size: 17px;
     white-space: nowrap;
     margin-right: 20px;
 }
 
-.menu__item:first-child{
+.menu__link--focused{
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 17px;
@@ -100,19 +121,12 @@ body{
     border-radius: 6px;
     background-color: rgba(255, 255, 255, 1);
 }
-.menu__item:last-child{
+
+.menu__link:last-child{
     margin-right: 0;
 }
 
-.menu__link{
-    text-decoration: none;
-    font-family: 'TT-Lakes-medium', 'Arial', sans-serif;
-    color: rgba(126, 126, 130, 1);
-    font-size: 17px;
-}
-
-
-.main-information{
+.main-information__container{
     margin-bottom: 16px;
     margin-left: 16px;
     margin-right: 16px;
@@ -123,12 +137,15 @@ body{
     font-family: 'TT-Lakes-regular', 'Arial', sans-serif;
     margin-bottom: 16px;
 }
+
 .main-information__textForPad{
     display: none;
 }
+
 .main-information__textForDesktop{
     display: none;
 }
+
 .main-information__link{
     text-decoration: none;
     font-family: 'TT-Lakes-medium', 'Arial', sans-serif;
@@ -136,12 +153,12 @@ body{
     align-items: center;
     color: rgba(27, 28, 33, 1);
 }
-.main-information__link img{
+
+.main-information__img{
     margin-right: 8px;
 }
 
-.image-content{
-    display: block;
+.img-content{
     width: 320px;
     height: auto;
 }
@@ -150,36 +167,46 @@ body{
     .header__link:nth-child(2), .header__link:nth-child(3), .header__link:nth-child(4), .header__link:nth-child(5), .header__link:nth-child(6), .header__link:nth-child(7), .header__link:nth-child(8), .header__link:nth-child(9){
         display: block;
     }
+
     .header__link:first-child, .header__link:nth-child(2){
         margin-right: 20px;
     }
+
     .header__link:nth-child(4){
         margin-right: 250px;
     }
+
     .header__link:nth-child(6), .header__link:nth-child(7){
         margin-right: 20px;
     }
+
     .container{
         width: 768px;
     }
+
     .content{
         margin-left: 8px;
         margin-right: 8px;
     }
+
     .menu{
         overflow: hidden;
     }
+
     .main-information__textForPad{
         display: block;
     }
-    .content-flex{
+
+    .containerForPadDesk{
         display: flex;
     }
-    .image-content{
+
+    .img-content{
         margin-left: 48px;
         width: 360px;
     }
-    .caption{
+
+    .caption__container{
         margin-bottom: 32px;
     }
   }
@@ -188,9 +215,11 @@ body{
         width: 1120px;
         
     }
+
     .caption{
         display: none;
     }
+
     .captionForDesktop{
         display: flex;
         justify-content: flex-start;
@@ -198,11 +227,16 @@ body{
         font-size: 15px;
         color: rgba(27, 28, 33, 1);
         align-items: center;
+    }
+
+    .captionForDesktop__container{
         margin-right: 450px;
     }
-    .header__link:nth-child(1), .header__link:nth-child(2), .header__link:nth-child(3), .header__link:nth-child(4), .header__link:nth-child(5), .header__link:nth-child(6), .header__link:nth-child(7), .header__link:nth-child(8) {
+
+    .header__link:nth-child(2), .header__link:nth-child(3), .header__link:nth-child(4), .header__link:nth-child(5), .header__link:nth-child(6), .header__link:nth-child(7), .header__link:nth-child(8) {
         display: none;
     }
+
     .header__link:nth-child(9), .header__link:nth-child(10){
         display: flex;
         align-items: center;
@@ -211,40 +245,56 @@ body{
         font-family: 'TT-Lakes-medium', 'Arial', sans-serif;
 
     }
+
     .header__link:nth-child(9){
         margin-right: 32px;
     }
-    .textForDesktop{
+
+    .header__textForDesktop{
         display: block;
         margin-right: 8px;
     }
+
     .container{
         background-color: rgba(248, 248, 248, 1);
         padding-top: 42px;
     }
+
     .header{
         background-color: rgba(248, 248, 248, 1);
-        margin: 0;
 
     }
+
+    .header__container{
+        margin: 0;
+    }
+
     .captionForDesktop__item:first-child{
         margin-right: 34px;
     }
+
     .content{
         margin-left: 18px;
         margin-right: 18px;
         padding-bottom: 49px;
     }
+
     .menu{
         flex-wrap: wrap;
+    }
+
+    .menu__container{
         margin-bottom: 4px;
     }
-    .image-content{
+
+    .img-content{
         width: 531px;
     }
-    .menu__item{
+
+    .menu__link{
         margin-bottom: 14px;
     }
+
     .main-information__textForDesktop{
         display: inline;
     }

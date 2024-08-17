@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +8,8 @@
 </head>
 <body>
     <div class="container">
-        <header class="header">
-            <div class="captionForDesktop">
+        <header class="header header__container">
+            <div class="captionForDesktop captionForDesktop__container">
                 <img class="captionForDesktop__item" src="Images/main/highlight.svg" alt="border-decoration">
                 <h1 class="captionForDesktop__item">Услуги и сервисы</h1>
             </div>
@@ -21,32 +20,33 @@
             <a class="header__link" href="#"><img src="Images/header/chat.png" alt="logo"></a>
             <a class="header__link" href="#"><img src="Images/header/profile.png" alt="logo"></a>
             <span class="header__link" href="#"><img src="Images/header/divider.svg" alt="border-decoration"></span>
-            <a class="header__link" href="#"><span class="textForDesktop">оставить заявку</span><img src="Images/header/repair.png" alt="repair-icon"></a>
-            <a class="header__link" href="#"><span class="textForDesktop">статус ремонта</span><img src="Images/header/checkstatus.png" alt="checkstatus-icon"></a>
+            <a class="header__link" href="#"><span class="header__textForDesktop">оставить заявку</span><img src="Images/header/repair.png" alt="repair-icon"></a>
+            <a class="header__link" href="#"><span class="header__textForDesktop">статус ремонта</span><img src="Images/header/checkstatus.png" alt="checkstatus-icon"></a>
         </header>
         <main class="content">
-            <div class="caption">
+            <div class="caption caption__container">
                 <img class="caption__item" src="Images/main/highlight.svg" alt="border-decoration">
                 <h1 class="caption__item">Услуги и сервисы</h1>
             </div>
-            <div class="menu">
-                <div class="menu__item"><a class="menu__link" href="#"> Ремонтируемые бренды </a></div>
-                <div class="menu__item"><a class="menu__link" href="#"> Ремонтируемые устройства </a></div>
-                <div class="menu__item"><a class="menu__link" href="#"> Цены и услуги </a></div>
-                <div class="menu__item"><a class="menu__link" href="#"> Адреса сервисных центров </a></div>
-                <div class="menu__item"><a class="menu__link" href="#"> Специальные цены </a></div>
-                <div class="menu__item"><a class="menu__link" href="#"> Отзывы </a></div>
+            <div class="menu menu__container">
+                <a class="menu__link menu__link--focused" href="#"> Ремонтируемые бренды </a>
+                <a class="menu__link" href="#"> Ремонтируемые устройства </a>
+                <a class="menu__link" href="#"> Цены и услуги </a>
+                <a class="menu__link" href="#"> Адреса сервисных центров </a>
+                <a class="menu__link" href="#"> Специальные цены </a>
+                <a class="menu__link" href="#"> Отзывы </a>
             </div>
-            <div class="content-flex">
-                <div class="main-information">
+            <div class="containerForPadDesk">
+                <div class="main-information main-information__container">
                     <p class="main-information__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
                     <p class="main-information__text main-information__textForPad">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class=" main-information__textForDesktop">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span></p>
-                    <a href="#" class="main-information__link"><img src="Images/main/continue_button.svg" alt="continue_button"> Читать далее</a>
+                    <a href="#" class="main-information__link"><img class="main-information__img" src="Images/main/continue_button.svg" alt="continue_button"> Читать далее</a>
                 </div>
-                <div>
-                    <img class="image-content" src="/Images/main/content_picture.jpg" alt="content_picture">
+                <div class="content-picture">
+                    <img class="img-content" src="/Images/main/content_picture.jpg" alt="content_picture">
                 </div>
             </div>
         </main>
     </div>  
 </body>
+
