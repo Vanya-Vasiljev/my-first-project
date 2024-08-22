@@ -25,14 +25,13 @@ body{
 }
 
 .container{
-    width: 320px;
     margin: 0 auto;
 }
 
 .header{
     display: flex;
     height: 51px;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     background-color: rgba(255, 255, 255, 1);
 }
@@ -43,7 +42,24 @@ body{
     margin-left: 16px;
 }
 
- .header__link:nth-child(3), .header__link:nth-child(5), .header__link:nth-child(6), .header__link:nth-child(7){
+.header__left{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header__right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+
+ .header__link-left:nth-child(3){
+    display: none;
+}
+
+.header__link-right:nth-child(1), .header__link-right:nth-child(2), .header__link-right:nth-child(3){
     display: none;
 }
 
@@ -96,20 +112,29 @@ body{
     justify-content: flex-start;
     align-items: center;
     overflow: scroll;   
+    margin:0;
+    padding:0;
 }
 
-.menu__container{
+.nav-container{
     margin-bottom: 24px;
     margin-left: 16px;
 }
 
 .menu__link{
     text-decoration: none;
+    list-style-type: none;
     font-family: 'TT-Lakes-medium', 'Arial', sans-serif;
     color: rgba(126, 126, 130, 1);
     font-size: 17px;
     white-space: nowrap;
     margin-right: 20px;
+    padding:0;
+}
+
+.menu__link a{
+    text-decoration: none;
+    color: rgba(126, 126, 130, 1);
 }
 
 .menu__link--focused{
@@ -158,32 +183,21 @@ body{
     margin-right: 8px;
 }
 
+.content-picture{
+    margin-left: 16px;
+}
+
 .img-content{
     width: 320px;
     height: auto;
 }
 
 @media screen and (min-width: 768px) {
-    .header__link:nth-child(2), .header__link:nth-child(3), .header__link:nth-child(4), .header__link:nth-child(5), .header__link:nth-child(6), .header__link:nth-child(7), .header__link:nth-child(8), .header__link:nth-child(9){
-        display: block;
-    }
 
-    .header__link:first-child, .header__link:nth-child(2){
-        margin-right: 20px;
+    .header__link-right:nth-child(1), .header__link-right:nth-child(2), .header__link-right:nth-child(3){
+        display: inline;
     }
-
-    .header__link:nth-child(4){
-        margin-right: 250px;
-    }
-
-    .header__link:nth-child(6), .header__link:nth-child(7){
-        margin-right: 20px;
-    }
-
-    .container{
-        width: 768px;
-    }
-
+    
     .content{
         margin-left: 8px;
         margin-right: 8px;
@@ -197,8 +211,13 @@ body{
         display: block;
     }
 
+    .main-information__container{
+        width: 312px;
+    }
+
     .containerForPadDesk{
         display: flex;
+        justify-content: space-between;
     }
 
     .img-content{
@@ -211,11 +230,6 @@ body{
     }
   }
   @media screen and (min-width: 1120px) {
-    .container{
-        width: 1120px;
-        
-    }
-
     .caption{
         display: none;
     }
@@ -229,25 +243,22 @@ body{
         align-items: center;
     }
 
-    .captionForDesktop__container{
-        margin-right: 450px;
-    }
-
-    .header__link:nth-child(2), .header__link:nth-child(3), .header__link:nth-child(4), .header__link:nth-child(5), .header__link:nth-child(6), .header__link:nth-child(7), .header__link:nth-child(8) {
+    .header__link-left:nth-child(2), .header__link-left:nth-child(3), .header__link-left:nth-child(4){
         display: none;
     }
 
-    .header__link:nth-child(9), .header__link:nth-child(10){
+    .header__link-right:nth-child(5), .header__link-right:nth-child(6) {
         display: flex;
         align-items: center;
         text-decoration: none;
         color: rgba(27, 28, 33, 1);
         font-family: 'TT-Lakes-medium', 'Arial', sans-serif;
+        
 
     }
 
-    .header__link:nth-child(9){
-        margin-right: 32px;
+    .header__link-right:nth-child(1), .header__link-right:nth-child(2), .header__link-right:nth-child(3), .header__link-right:nth-child(4){
+        display: none;
     }
 
     .header__textForDesktop{
@@ -269,6 +280,10 @@ body{
         margin: 0;
     }
 
+    .header__link:last-child{
+        margin-right: 16px;
+    }
+
     .captionForDesktop__item:first-child{
         margin-right: 34px;
     }
@@ -283,7 +298,7 @@ body{
         flex-wrap: wrap;
     }
 
-    .menu__container{
+    .nav-container{
         margin-bottom: 4px;
     }
 
@@ -297,5 +312,8 @@ body{
 
     .main-information__textForDesktop{
         display: inline;
+    }
+    .main-information__container{
+        width: 490px;
     }
   } 
